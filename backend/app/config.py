@@ -14,6 +14,13 @@ BACKEND_DIR = Path(__file__).resolve().parent.parent
 UPLOAD_DIR = Path(os.getenv("DATAPILOT_UPLOAD_DIR", BACKEND_DIR / "uploads"))
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
+# Built frontend. When this directory exists the API also serves the React app,
+# so a deployment is a single service on a single origin and CORS never applies.
+# Empty in development, where Vite serves the frontend on its own port.
+FRONTEND_DIST = Path(
+    os.getenv("DATAPILOT_FRONTEND_DIST", BACKEND_DIR.parent / "frontend" / "dist")
+)
+
 # Largest CSV we accept, in bytes. Keeps a stray 2 GB file from taking the app down.
 MAX_UPLOAD_BYTES = int(os.getenv("DATAPILOT_MAX_UPLOAD_MB", "100")) * 1024 * 1024
 

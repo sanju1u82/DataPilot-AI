@@ -9,9 +9,13 @@ runnable Python script for the whole thing.
 
 ---
 
+Deploying it: see **[DEPLOYMENT.md](DEPLOYMENT.md)**. The included `Dockerfile`
+builds the frontend and serves it from the API process, so a deployment is one
+service on one origin.
+
 ## Running it
 
-Backend and frontend run independently.
+Backend and frontend run independently in development.
 
 ### Backend
 

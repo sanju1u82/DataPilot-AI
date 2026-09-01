@@ -16,6 +16,13 @@ export function resolveBaseUrl() {
     return configured.replace(/\/+$/, "");
   }
 
+  // Production build. FastAPI serves these files itself, so the API is on the
+  // same origin and a relative base is correct — guessing a port here would
+  // send requests to localhost on the visitor's own machine.
+  if (!import.meta.env.DEV) {
+    return "";
+  }
+
   if (typeof window !== "undefined") {
     const { protocol, hostname, port } = window.location;
 
@@ -57,8 +64,11 @@ function toFriendlyError(error) {
 
   // No response at all: the backend is down, or its port is still private.
   if (!error?.response) {
+    const target =
+      API_BASE_URL ||
+      (typeof window !== "undefined" ? window.location.origin : "the server");
     return new Error(
-      `Couldn't reach the API at ${API_BASE_URL}. Check the backend is running — ` +
+      `Couldn't reach the API at ${target}. Check the backend is running — ` +
         "and in Codespaces, that port 8000 is set to Public."
     );
   }

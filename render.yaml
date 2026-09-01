@@ -1,0 +1,12 @@
+# Render blueprint. In the Render dashboard: New → Blueprint → pick this repo.
+#
+# One Docker service serves both the API and the React app, so there is no
+# second deployment to wire up and no CORS configuration to get wrong.
+services:
+  - type: web
+    name: datapilot-ai
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
