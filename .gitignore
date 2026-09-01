@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# DataPilot AI: uploaded datasets and trained models are runtime data, not source.
+backend/uploads/*
+!backend/uploads/.gitkeep

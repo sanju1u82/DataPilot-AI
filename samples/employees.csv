@@ -1,0 +1,63 @@
+employee_id,name,department,age,salary,years_experience,city,join_date,remote,satisfaction_score,notes,legacy_flag
+E001,Alex Turner,Engineering,29,72000,5,London,2020-03-15,true,7.8,Joined from a startup,active
+E002,Sarah Klein,Engineering,34,95000,9,Berlin,2017-06-01,false,8.2,,active
+E003,John Mensah,Sales,41,61000,14,Manchester,2013-01-20,false,6.1,Top performer 2023,active
+E004,Priya Nair,Engineering,27,68000,4,Bangalore,2021-08-09,true,8.9,,active
+E005,Marco Rossi,Marketing,38,58000,11,Milan,2015-04-12,false,5.4,Requested transfer,active
+E006,Lena Fischer,Engineering,31,88000,7,Berlin,2019-02-25,true,7.2,,active
+E007,Tom Baker,Support,24,41000,2,Leeds,2023-05-02,false,6.7,,active
+E008,Aisha Rahman,Sales,36,67000,10,Dubai,2016-09-18,false,7.5,,active
+E009,Daniel Kim,Engineering,45,120000,18,Seoul,2009-11-30,false,8.8,Principal engineer,active
+E010,Emma Wallace,Marketing,29,54000,6,London,2020-01-14,true,6.9,,active
+E011,Carlos Diaz,Support,26,39000,3,Madrid,2022-07-21,false,5.8,,active
+E012,Nina Petrova,Engineering,33,91000,8,Prague,2018-03-05,true,,,active
+E013,Owen Griffiths,Sales,49,74000,22,Cardiff,2005-06-13,false,6.3,Long tenure,active
+E014,Yuki Tanaka,Engineering,30,84000,6,Tokyo,2019-10-07,true,8.1,,active
+E015,Grace Okafor,Marketing,35,62000,9,Lagos,2017-02-19,false,7.0,,active
+E016,Ben Schultz,Support,22,36000,1,Hamburg,2024-01-08,false,6.4,New hire,active
+E017,Fatima Zahra,Engineering,28,71000,4,Casablanca,2021-04-26,true,8.5,,active
+E018,Henry Lloyd,Sales,44,79000,17,Bristol,2011-08-15,false,,,active
+E019,Sofia Almeida,Engineering,32,89000,8,Lisbon,2018-05-30,true,7.9,,active
+E020,Raj Malhotra,Marketing,40,66000,13,Mumbai,2014-03-11,false,6.6,,active
+E021,Chloe Dubois,Support,25,40000,2,Paris,2023-02-06,true,7.1,,active
+E022,Viktor Novak,Engineering,37,98000,12,Prague,2015-09-22,false,8.0,,active
+E023,Amara Nwosu,Sales,31,64000,7,Lagos,2019-06-17,false,7.3,,active
+E024,Liam O'Connor,Engineering,26,65000,3,Dublin,2022-01-24,true,8.4,,active
+E025,Mei Lin,Marketing,33,59000,8,Singapore,2018-08-13,false,6.8,,active
+E026,Jonas Berg,Support,28,43000,4,Stockholm,2021-03-29,false,5.9,,active
+E027,Isabella Costa,Engineering,39,105000,15,Sao Paulo,2012-11-05,true,8.6,Team lead,active
+E028,Ahmed Farouk,Sales,42,71000,16,Cairo,2010-07-19,false,6.0,,active
+E029,Hannah Weber,Engineering,29,76000,5,Vienna,2020-09-14,true,7.7,,active
+E030,Peter Novotny,Marketing,46,69000,20,Prague,2007-04-02,false,5.6,Considering retirement,active
+E031,Zoe Mitchell,Support,23,38000,1,Auckland,2024-03-18,true,7.4,,active
+E032,Karim Belkacem,Engineering,35,93000,10,Algiers,2016-05-09,false,8.3,,active
+E033,Laura Jensen,Sales,30,63000,6,Copenhagen,2020-02-27,false,7.2,,active
+E034,Felix Braun,Engineering,41,110000,17,Munich,2010-10-11,true,8.7,,active
+E035,Anika Sharma,Marketing,27,52000,4,Delhi,2021-11-08,false,6.5,,active
+E036,Diego Herrera,Support,29,44000,5,Bogota,2020-06-23,false,6.2,,active
+E037,Elsa Lindqvist,Engineering,34,90000,9,Stockholm,2017-07-31,true,7.6,,active
+E038,Marcus Hall,Sales,38,70000,12,Toronto,2015-01-16,false,,,active
+E039,Ines Moreau,Engineering,25,63000,2,Lyon,2023-04-10,true,8.2,,active
+E040,Kwame Asante,Marketing,32,57000,7,Accra,2019-01-28,false,6.7,,active
+E041,Rachel Green,Support,27,42000,3,Melbourne,2022-05-15,true,7.0,,active
+E042,Stefan Kovac,Engineering,43,115000,19,Zagreb,2008-09-01,false,8.9,Architect,active
+E043,Bianca Ferreira,Sales,33,68000,9,Porto,2017-10-24,false,7.1,,active
+E044,Noah Adler,Engineering,28,74000,4,Tel Aviv,2021-06-07,true,8.0,,active
+E045,Camille Roux,Marketing,36,64000,10,Marseille,2016-02-14,false,6.4,,active
+E046,Tobias Meyer,Support,24,37000,2,Zurich,2023-08-21,false,5.7,,active
+E047,Leila Hassan,Engineering,31,86000,7,Amman,2019-03-13,true,8.1,,active
+E048,George Papadakis,Sales,47,76000,21,Athens,2006-12-04,false,6.2,,active
+E049,Maya Cohen,Engineering,30,81000,6,Tel Aviv,2020-04-20,true,7.8,,active
+E050,Dmitri Volkov,Marketing,39,67000,14,Riga,2013-05-27,false,6.1,,active
+E051,Aiko Yamamoto,Support,26,41000,3,Osaka,2022-09-12,true,7.3,,active
+E052,Pablo Ruiz,Engineering,36,94000,11,Barcelona,2015-11-16,false,8.4,,active
+E053,Freya Nilsen,Sales,29,62000,5,Oslo,2020-08-03,false,7.0,,active
+E054,Samuel Ofori,Engineering,27,69000,4,Accra,2021-02-11,true,8.3,,active
+E055,Julia Kowalski,Marketing,34,61000,9,Warsaw,2017-04-25,false,6.9,,active
+E056,Ethan Brooks,Support,25,39000,2,Vancouver,2023-01-30,false,6.0,,active
+E057,Nadia Haddad,Engineering,38,101000,13,Beirut,2014-06-09,true,8.5,,active
+E058,Lucas Silva,Sales,32,66000,8,Rio de Janeiro,2018-12-17,false,7.4,,active
+E059,Hana Dvorak,Engineering,29,77000,5,Brno,2020-05-06,true,7.9,,active
+E060,Ryan Kelly,Marketing,43,72000,18,Dublin,2009-03-23,false,5.5,,active
+E060,Ryan Kelly,Marketing,43,72000,18,Dublin,2009-03-23,false,5.5,,active
+E014,Yuki Tanaka,Engineering,30,84000,6,Tokyo,2019-10-07,true,8.1,,active

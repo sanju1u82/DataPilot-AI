@@ -1,29 +1,64 @@
-#initialize the application
-#main.py does not get called every time a request comes in.
+"""FastAPI application entry point.
+
+Wires up CORS, error handling and the API routers. All business logic lives in
+`services` and `ml`; this module only assembles the app.
+"""
+
+import logging
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.api.automl import router as automl_router
+from app.api.dataset import router as dataset_router
 from app.api.upload import router as upload_router
+from app.config import get_allowed_origin_regex, get_allowed_origins
+from app.core.errors import register_exception_handlers
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+)
 
 app = FastAPI(
     title="DataPilot AI",
-    description="AI-powered AutoML Platform",
-    version="1.0.0"
+    description="AI-powered AutoML and data analysis platform",
+    version="2.0.0",
 )
+
+allowed_origins = get_allowed_origins()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://refactored-space-chainsaw-9796q9gqgqx529x4w-5173.app.github.dev"
-    ],
-    allow_credentials=True,
+    allow_origins=allowed_origins,
+    # The regex covers Codespaces and Gitpod, whose hostnames are generated per
+    # container and so cannot be listed ahead of time.
+    allow_origin_regex=get_allowed_origin_regex(),
+    # A wildcard origin and credentials are mutually exclusive under the CORS
+    # spec; browsers reject the combination outright.
+    allow_credentials="*" not in allowed_origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-app.include_router(upload_router)
+register_exception_handlers(app)
 
-@app.get("/")
+app.include_router(upload_router)
+app.include_router(dataset_router)
+app.include_router(automl_router)
+
+
+@app.get("/", tags=["meta"])
 def root():
-    return {"message": "Welcome to DataPilot AI"}
+    return {
+        "name": "DataPilot AI",
+        "version": app.version,
+        "docs": "/docs",
+        "message": "Welcome to DataPilot AI",
+    }
+
+
+@app.get("/health", tags=["meta"])
+def health():
+    """Liveness check, and a quick way to confirm CORS is configured."""
+    return {"status": "ok", "allowed_origins": allowed_origins}
